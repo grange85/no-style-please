@@ -14,6 +14,10 @@
   {%-seo title=false-%}
   {%-feed_meta-%}
 
+  {%- if site.plausible_domian -%}
+  <script async defer data-domain="{{ site.plausible_domain }}" src="https://www.{{ site.plausible_domain }}/js/script.file-downloads.outbound-links.pageview-props.js"></script>
+  {%- endif -%}
+
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
 </head>
