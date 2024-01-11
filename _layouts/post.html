@@ -12,7 +12,7 @@ layout: default
 	Categories: 
 	{% for cat in page.categories %}
 		{% if site.main_categories contains cat  %}
-		<a href="/category/{{cat | slugify}}">{{ cat }}</a>
+		<a href="{{-site.baseurl-}}/category/{{cat | slugify}}">{{ cat }}</a>
 		{% endif %}
 	{% endfor %}
   {% endif %}
