@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+{% if site.image %}
+<img src="{{ site.image }}" alt="{{ site.title }} photo" />
+{% endif %}
+
+
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
