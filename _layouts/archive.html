@@ -5,6 +5,10 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 
+{% if page.imageurl %}
+<img src="{{ page.imageurl }}" alt="{{ page.title }} photo" />
+{% endif %}
+
 {{content}}
 
 <h3>Posts</h3>
