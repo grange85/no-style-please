@@ -98,3 +98,7 @@ img {
 	border-top: thin solid black;
 	font-size: 0.9rem;
 }
+.page-navigation li {
+	white-space: nowrap;
+	overflow: hidden;
+}
