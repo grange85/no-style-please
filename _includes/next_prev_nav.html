@@ -1,10 +1,10 @@
 {%-if site.theme_config.post_navigation-%}
 <ul class="page-navigation">
     {% if page.previous.url %}
-	<li>Previous post: <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a></li>
+	<li>Previous post: <a class="prev" href="{{page.previous.url}}">{{page.previous.title}}</a></li>
     {% endif %}
     {% if page.next.url %}
-	<li>Next post: <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a></li>
+	<li>Next post: <a class="next" href="{{page.next.url}}">{{page.next.title}}</a></li>
     {% endif %}
 </ul>
 {%-endif-%}
