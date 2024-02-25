@@ -85,6 +85,7 @@ blockquote {
   padding: 1rem;
 
   p { margin: 0; }
+  p + p { margin-top: 1.5rem; }
 }
 
 img {
