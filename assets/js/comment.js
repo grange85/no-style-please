@@ -1,7 +1,7 @@
 var this_script = document.getElementById("comment-script");
 var sectionid = this_script.getAttribute('data-sectionid');
 
-document.getElementById("comment-section").innerHTML = shortname + " / " + sectionid;
+document.getElementById("comment-section").innerHTML = sectionid;
 
 // initComments({
 //    node: document.getElementById("comment-section"),
