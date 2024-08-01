@@ -26,15 +26,6 @@ layout: default
 {%-if site.cactus_comments.shortname-%}
 {%- if page.comments != false -%}
   <div id="comment-section"></div>
-  <script>
-  initComments({
-    node: document.getElementById("comment-section"),
-    defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
-    serverName: "cactus.chat",
-    siteName: "{{ site.cactus_comments.shortname }}",
-	  commentSectionId: "{{ site.cactus_comments.shortname | slugify}}-{{ page.title | slugify }}"
-  })
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://cactus.chat" rel="nofollow">comments powered by matrix.org.</a></noscript>
+  <script src="/assets/js/comment.js" id="comment-script" data-sectionid="{{ site.cactus_comments.shortname | slugify}}-{{ page.title | slugify }}">
 {%- endif -%}
 {%-endif-%}
