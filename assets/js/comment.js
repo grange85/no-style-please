@@ -1,6 +1,5 @@
 var this_script = document.getElementById("comment-script");
-var shortname = this_script.attr('data-shortname');
-var sectionid = this_sctipt.attr('data-sectionid');
+var sectionid = this_script.getAttribute('data-sectionid');
 
 document.getElementById("comment-section").innerHTML = shortname + " / " + sectionid;
 
