@@ -6,8 +6,8 @@ document.getElementById("comment-section").innerHTML = sectionid;
 
 initComments({
     node: document.getElementById("comment-section"),
-    defaultHomeserverUrl: "https://matrix.org
-    serverName: "matrix.org",
+    defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+    serverName: "cactus.chat",
     siteName: sitename,
     commentSectionId: sitename + "-" + sectionid
   })
