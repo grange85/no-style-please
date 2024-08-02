@@ -23,9 +23,9 @@ layout: default
 
 {%-include next_prev_nav.html-%}
 
-{%-if site.cactus_comments.shortname-%}
+{%-if site.cactus_comments.sitename-%}
 {%- if page.comments != false -%}
   <div id="comment-section"></div>
-  <script src="/assets/js/comment.js" id="comment-script" data-sectionid="{{ site.cactus_comments.shortname | slugify}}-{{ page.title | slugify }}"></script>
+  <script src="/assets/js/comment.js" id="comment-script" data-sitename="{{ site.cactus_comments.sitename | slugify}}" data-sectionid="{{ page.title | slugify }}"></script>
 {%- endif -%}
 {%-endif-%}
