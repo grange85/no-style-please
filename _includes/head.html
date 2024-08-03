@@ -20,8 +20,8 @@
 
 {%-if site.cactus_comments.sitename-%}
 {%- if page.comments == true -%}
-<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-<link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css" />
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js?{{site.time | date: "%Y%m%d%H%M" }}"></script>
+<link rel="stylesheet" href="https://latest.cactus.chat/style.css?{{site.time | date: "%Y%m%d%H%M" }}" type="text/css" />
 {%- endif -%}
 {%-endif-%}
 
