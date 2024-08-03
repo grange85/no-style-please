@@ -18,6 +18,10 @@
   <script async defer data-domain="{{ site.plausible_domain }}" src="https://www.{{ site.plausible_domain }}/js/script.file-downloads.outbound-links.pageview-props.js"></script>
   {%- endif -%}
 
+  {%- if site.cactus_comments.sitename -%}
+  <script type="text/javascript" src="/assets/js/cactus.js"></script>
+  <link rel="stylesheet" href="/assets/css/cactus-style.css" type="text/css">
+  {%- endif -%}
 
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?{{site.time | date: "%Y%m%d%H%M" }}" />
