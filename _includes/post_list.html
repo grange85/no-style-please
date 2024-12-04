@@ -14,8 +14,12 @@
   <ul class="post-index">
     {%- for post in posts limit: include.limit -%}
         <li>
-          <span>{{- post.date | date: site.theme_config.date_format -}}</span>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span>{{- post.date | date: site.theme_config.date_format -}}</span>&nbsp;
+		  {%- if post.series-title -%}<span class="series-title">{{post.series-title}}</span><br>
+		  <span class="indent-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+		  {%-else-%}
+		  <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+		  {%-endif-%}
         </li>
     {%- endfor -%}
     {%- if include.show_more and limit_exceeded -%}
