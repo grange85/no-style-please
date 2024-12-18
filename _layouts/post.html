@@ -5,7 +5,9 @@ layout: default
 
 <article>
   <p class="post-meta">
-    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+  <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+
+  {%- if page.author and page.author.login != "admin" %}<br>Author: <a href="/authors/#{{-page.author.login-}}">{{ page.author.display_name -}}</a> {%- endif -%}
 	{% if page.categories %}<br>
 	Categories: 
 	{% for cat in page.categories %}
