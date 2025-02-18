@@ -130,6 +130,15 @@ blockquote strong {
   color: #e98623;
 }
 
+.category-metadata {
+  font-size: 0.95rem;
+  color: #999;
+}
+
+.category-metadata > h4 {
+  margin-top: 1rem;
+}
+
 /* wrap list items if full width */
 @media only screen 
 and (min-width : 704px) {

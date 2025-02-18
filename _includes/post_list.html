@@ -1,8 +1,10 @@
 {%-if include.category-%}
-  {%-assign posts = site.categories[include.category]-%}  
+  {%-assign posts = site.categories[include.category]-%}
 {%-else-%}
   {%-assign posts = site.posts-%}
 {%-endif-%}
+
+
 
 {%-if include.limit and posts.size > include.limit-%}
   {%-assign limit_exceeded = true-%}
@@ -26,4 +28,33 @@
       <li><a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a></li>
     {%- endif -%}
   </ul>
+
+  {%-if page.metadata-%}
+	{%-assign number_of_posts = posts.size-%}
+	{%-assign longest_post = 0-%}
+	{%-assign shortest_post = 0-%}
+	{%-for post in posts-%}
+		{%-assign post_words = post.content | number_of_words-%}
+		{%-assign word_count = word_count | plus: post_words-%}
+		{%-if post_words > longest_post-%}
+			{%-assign longest_post = post_words-%}
+			{%-assign longest_post_title = post.title-%}
+			{%-assign longest_post_url = post.url-%}
+		{%-endif-%}
+		{%-if post_words < shortest_post or shortest_post == 0-%}
+			{%-assign shortest_post = post_words-%}
+			{%-assign shortest_post_title = post.title-%}
+			{%-assign shortest_post_url = post.url-%}
+		{%-endif-%}
+	{%-endfor-%}
+	{%-assign average_words = word_count | divided_by: number_of_posts-%}
+	<div class="category-metadata">
+	<h4>Category information</h4>
+	Number of posts: {{number_of_posts}}<br/>
+		Total number of words: {{word_count}}<br/>
+		Average number of words per post: {{average_words}}<br/>
+		Longest post: <a href="{{longest_post_url}}">{{longest_post_title }}</a> <em>({{longest_post}} words)</em><br/>
+		Shortest post: <a href="{{shortest_post_url}}">{{shortest_post_title }}</a> <em>({{shortest_post}} words)</em>
+	</div>
+  {%-endif-%}
 {%- endif -%}
