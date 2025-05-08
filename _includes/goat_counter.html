@@ -1,3 +1,8 @@
+<script>
+    // Only load on production environment.
+	if (window.location.host !== '{{ site.goat_counter }}.co.uk')
+        window.goatcounter = {no_onload: true}
+</script>
 <script data-goatcounter="https://{{ site.goat_counter }}.goatcounter.com/count"
         async src="https://gc.zgo.at/count.v4.js"
         crossorigin="anonymous"
