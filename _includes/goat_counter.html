@@ -1,6 +1,8 @@
 <script>
-	if (window.location.host !== 'www.{{ site.goat_counter }}.co.uk')
-        window.goatcounter = {no_onload: true}
+	if (!window.location.host.contains('{{ site.goat_counter }}')){
+        window.goatcounter = {no_onload: true};
+	console.log('dev');
+	}
 </script>
 <script data-goatcounter="https://{{ site.goat_counter }}.goatcounter.com/count"
         async src="https://gc.zgo.at/count.v4.js"
