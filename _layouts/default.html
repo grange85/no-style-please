@@ -10,7 +10,7 @@
       </div>
     </main>
 
-    {%-if site.goat_counter and jekyll.environment == "production"-%}
+	{%-if site.goat_counter and jekyll.environment == "production" and page.title != "404 - page not found"-%}
       {%-include goat_counter.html-%}
     {%-endif-%}
 
