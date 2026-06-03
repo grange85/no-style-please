@@ -22,7 +22,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="{{ page_title | escape }}" />
-  <meta property="twitter:image" content="{{ site.og_image | default: site.logo | absolute_url }}" />
+  <meta property="twitter:image" content="{{ page.image | default: site.og_image | default: site.logo | absolute_url }}" />
 
   <link rel="canonical" href="{{ canonical_url }}" />
 
